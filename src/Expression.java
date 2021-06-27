@@ -1,4 +1,3 @@
-
 public class Expression {
     public static int count(int x, int y, String sign) {
         switch (sign) {
