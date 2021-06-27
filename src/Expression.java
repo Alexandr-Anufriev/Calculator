@@ -1,7 +1,6 @@
-import java.io.IOException;
 
 public class Expression {
-    public static int count(int x, int y, String sign) throws IOException {
+    public static int count(int x, int y, String sign) {
         switch (sign) {
             case "+":
                 return x + y;
@@ -11,7 +10,7 @@ public class Expression {
                 return  x * y;
             case "/":
                 return  x / y;
-            default: throw new IOException("Некорректный знак вычисления");
+            default: return 0;
         }
     }
 }

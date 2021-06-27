@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Calculation {
@@ -14,8 +15,15 @@ public class Calculation {
         String sign;
 
         if (arrayOfExpression.length == 3) {
+            if (arrayOfExpression[1].equals("+")
+                    || arrayOfExpression[1].equals("-")
+                    || arrayOfExpression[1].equals("/")
+                    || arrayOfExpression[1].equals("*")) {
+                sign = arrayOfExpression[1];
+            } else {
+                throw new Exception("Введен неверный знак");
+            }
             first = arrayOfExpression[0];
-            sign = arrayOfExpression[1];
             second = arrayOfExpression[2];
         } else {
             throw new Exception("Неправильно введено выражение");
